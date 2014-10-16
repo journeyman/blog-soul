@@ -9,3 +9,9 @@ cabal-dev
 .cabal-sandbox/
 cabal.sandbox.config
 cabal.config
+
+# Hakyll compiled site
+_cache
+_site
+site
+hakyll
