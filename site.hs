@@ -3,10 +3,12 @@
 import           Data.Monoid (mappend)
 import           Hakyll
 
+import           Custom.Commands
+
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith myConfiguration $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -65,3 +67,6 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+myConfiguration :: Configuration
+myConfiguration = defaultConfiguration -- { destinationDirectory = "../uiblog" }

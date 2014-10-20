@@ -71,13 +71,93 @@
 	},
 	"buffers":
 	[
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 159,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site.hs",
+			"settings":
+			{
+				"buffer_size": 2400,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 58.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"browse",
+				"SublimeHaskell: Browse module"
+			],
+			[
+				"browsede",
+				"SublimeHaskell: Browse Declarations"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"browser",
+				"SublimeHaskell: Browse Declarations"
+			],
+			[
+				"haskell",
+				"SublimeHaskell: Configure"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packagel",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"browsepa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"browsed",
+				"SublimeHaskell: Browse Declarations"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"listpa",
+				"Package Control: List Packages"
+			],
+			[
+				"abou",
+				"About"
+			],
+			[
+				"package controlins",
+				"Package Control: Install Package"
+			],
+			[
+				"haskel",
+				"Set Syntax: Haskell"
+			],
 			[
 				"json",
 				"Set Syntax: JSON"
@@ -89,10 +169,6 @@
 			[
 				"set",
 				"Set Syntax: C#"
-			],
-			[
-				"haskell",
-				"Set Syntax: Haskell"
 			],
 			[
 				"showty",
@@ -151,20 +227,12 @@
 				"Set Syntax: Haskell"
 			],
 			[
-				"build",
-				"Build: Build"
-			],
-			[
 				"run",
 				"SublimeHaskell: Run"
 			],
 			[
 				"setsyntax hask",
 				"Set Syntax: Haskell"
-			],
-			[
-				"package",
-				"Package Control: Install Package"
 			]
 		],
 		"width": 400.0
@@ -193,6 +261,7 @@
 	],
 	"file_history":
 	[
+		"/D/hs/blog/site.hi",
 		"/D/cs/pr/src/Tests/Tests.Phone8/Tests.Phone8.csproj",
 		"/D/cs/pr/src/Tests/Tests.Infrastructure/Tests.Infrastructure.csproj",
 		"/D/hs/temp/main.hs",
@@ -275,6 +344,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deploy",
 			"moq",
 			"targetframe",
 			"interactivity",
@@ -322,8 +392,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "site.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2056,
+								2056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 695.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -372,7 +501,7 @@
 	},
 	"output.haskell_sublime_load":
 	{
-		"height": 100.0
+		"height": 340.0
 	},
 	"output.sublime_haskell_hdevtools_type":
 	{
@@ -393,6 +522,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"site.hs",
+				"site.hs"
+			],
+			[
+				".git",
+				".gitignore"
+			],
 			[
 				"tests.phone",
 				"src\\Tests\\Tests.Phone8\\Tests.Phone8.csproj"
