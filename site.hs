@@ -69,4 +69,4 @@ postCtx =
     defaultContext
 
 myConfiguration :: Configuration
-myConfiguration = defaultConfiguration -- { destinationDirectory = "../uiblog" }
+myConfiguration = defaultConfiguration { deploySite = deploy "../uiblog" }
