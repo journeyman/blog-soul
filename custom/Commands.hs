@@ -17,9 +17,16 @@ import           Control.Exception (throw)
 import           Hakyll.Core.Configuration (Configuration (..), deploySite)
 
 --------------------------------------------------------------------------------
+--caution: case-sensitive!
+ignoredItems :: [FilePath]
+ignoredItems = 
+    [".git",
+     "README.md",
+     ".gitignore"]
+
 deploy :: FilePath -> Configuration -> IO ExitCode
 deploy targetDir conf = do 
-    _ <- removeDirWithExceptions targetDir [".git"]
+    _ <- removeDirWithExceptions targetDir ignoredItems
     copyDir (destinationDirectory conf) targetDir
     return ExitSuccess
 
@@ -42,17 +49,17 @@ removeDirWithExceptions dirName excludeList = do
     else return False 
 
 -- borrowed from http://stackoverflow.com/questions/6807025/
+-- and a bit modified to overwrite dst directory if exists
 copyDir ::  FilePath -> FilePath -> IO ()
 copyDir src dst = do
   whenM (not <$> doesDirectoryExist src) $
     throw (userError "source does not exist")
-  whenM (doesFileOrDirectoryExist dst) $
-    throw (userError "destination already exists")
+  whenM (not <$> doesDirectoryExist dst) $
+    createDirectory dst
 
-  createDirectory dst
-  content <- getDirectoryContents src
-  let xs = filter (`notElem` [".", ".."]) content
-  forM_ xs $ \name -> do
+  contents <- getDirectoryContents src
+  let items = contents \\ dotDirs
+  forM_ items $ \name -> do
     let srcPath = src </> name
     let dstPath = dst </> name
     isDirectory <- doesDirectoryExist srcPath
@@ -61,8 +68,6 @@ copyDir src dst = do
       else copyFile srcPath dstPath
 
   where
-    doesFileOrDirectoryExist x = orM [doesDirectoryExist x, doesFileExist x]
-    orM xs = or <$> sequence xs
     whenM s r = s >>= flip when r
 
 
